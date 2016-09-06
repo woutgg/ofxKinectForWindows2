@@ -240,7 +240,7 @@ namespace ofxKinectForWindows2 {
 		//TODO: instead of allocating pixels, make sure that the given pixels are correct or reallocate ((512*2, 424) with 1 float channel)
 		//Returned object has a resolution of (512*2, 424) with 'float mono pixels'; each subsequent pair of floats is really a ColorSpacePoint.
 		//void Depth::getDepthToColorTable(ofFloatPixels & world) const {
-		ofFloatPixels Depth::getDepthToColorTable() const {
+		ofFloatPixels Depth::getDepthToColorMap() const {
 			ofFloatPixels depthToColorMap;
 
 			if (this->pixels.size() == 0) return depthToColorMap;
