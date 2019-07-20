@@ -248,7 +248,7 @@ namespace ofxKinectForWindows2 {
 			depthToColorMap.allocate(this->getWidth() * 2, this->getHeight(), ofPixelFormat::OF_PIXELS_MONO);
 			const int pixelCount = this->pixels.size();
 
-			HRESULT hr = this->coordinateMapper->MapDepthFrameToColorSpace(pixelCount, this->pixels.getPixels(), pixelCount, (ColorSpacePoint*)depthToColorMap.getPixels());
+			HRESULT hr = this->coordinateMapper->MapDepthFrameToColorSpace(pixelCount, this->pixels.getData(), pixelCount, (ColorSpacePoint*)depthToColorMap.getData());
 			if (hr < 0) {
 				throw(Exception("Failed to get depth to color mapping"));
 			}
